@@ -1,0 +1,49 @@
+# Web framework
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Database
+sqlalchemy[asyncio]
+asyncpg
+alembic
+
+# Task queue (PostgreSQL-native, no Redis)
+procrastinate
+psycopg[binary]
+psycopg2-binary
+
+# HTTP client
+httpx
+
+# Payments
+stripe
+
+# Google (OAuth + GCS + KMS)
+google-auth
+google-auth-oauthlib
+google-api-python-client
+google-cloud-storage
+google-cloud-kms
+google-genai>=2.3.0; python_version >= "3.10"
+google-genai>=1.47.0,<2.0.0; python_version < "3.10"
+
+# Anthropic Managed Agents
+anthropic
+
+# Crypto
+cryptography
+pyotp
+
+# Config
+pydantic[email]
+pydantic-settings
+email-validator
+python-dotenv
+
+# Utils
+python-jose[cryptography]
+passlib[bcrypt]==1.7.4
+bcrypt==3.2.2
+orjson
+tldextract

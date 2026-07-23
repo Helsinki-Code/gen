@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+.next/
+.nuxt/
+dist/
+build/
+.cache/
+*.local
+frontend/.docker-build/
+
+# Secrets / credentials
+secrets/
+*.json.key
+gcp-key.json
+service-account*.json
+**/amrogen-gcs-key.json
+*.pem
+*.p12
+backend/backups/
+backend/deploy/env.cloudrun.yaml
+frontend/deploy/env.cloudrun.yaml
+frontend/deploy/cloudrun-build-public.vars
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+.seo-cache/
+
+# Alembic
+backend/migrations/versions/__pycache__/
+
+# Test / coverage
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Local virtualenv (backend)
+backend/amr/

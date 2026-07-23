@@ -1,0 +1,9 @@
+Functionality,Website,API Key Variable,Usage Price,Minimum Entry Cost
+Lead Discovery & Scraping,https://brightdata.com,BRIGHT_DATA_API_TOKEN,"$1.50 per 1,000 results","$100 (Minimum top-up)"
+Autonomous Web Research & Extraction,https://parallel.ai,PARALLEL_API_KEY,"$0.005/req (Search) / $0.001 (Extract)","$19 (Standard Monthly Plan)"
+Real-time Voice & Audio Infrastructure,https://livekit.io,LIVEKIT_API_KEY,"$0.006 per participant minute","$0 (Free Tier / 10k mins)"
+WhatsApp & SMS Outreach,https://twilio.com,TWILIO_AUTH_TOKEN,"$0.005/msg + Meta fees","$20 (Initial Account balance)"
+AI Intelligence (OpenAI),https://openai.com,OPENAI_API_KEY,"$0.15/1M in, $0.60/1M out (GPT-4o-mini)","$5 (Minimum credit purchase)"
+AI Intelligence (Anthropic),https://anthropic.com,ANTHROPIC_API_KEY,"$3.00/1M in, $15/1M out (Claude 3.5 Sonnet)","$5 (Minimum credit purchase)"
+AI Intelligence (Google),https://aistudio.google.com,GOOGLE_API_KEY,"$0.075/1M in, $0.30/1M out (Gemini 1.5 Flash)","$0 (Free Tier available)"
+Web Content Reader for AI (RAG),https://jina.ai,JINA_API_KEY,"~$0.02 per 1M tokens","$0 (10M Free tokens initial)"

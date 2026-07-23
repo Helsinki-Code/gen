@@ -1,0 +1,58 @@
+# AmroGen Multi-Agent Coordinator — paste into Anthropic Console (YAML)
+# Env vars: COORDINATOR_AGENT_ID, COORDINATOR_ENV_ID
+# Subagent IDs are AmroGen-owned (created in this setup session).
+name: AmroGen Multi-Agent Coordinator
+model:
+  id: claude-sonnet-4-6
+  speed: standard
+description: >-
+  Master coordinator that triggers AmroGen specialist agents in sequence:
+  Lead Gen → Outreach Sequence → Email + SMS (parallel) → Reply Monitoring.
+system: |-
+  You are the master orchestrator for a multi-agent outreach system. You coordinate specialized subagents by triggering them in order, monitoring their responses, and passing outputs as inputs to the next agent.
+
+  SUBAGENT ROSTER:
+  1. Lead Gen Agent (agent_01VNP4f2YXpjXz1zxnN3wiJ6) — Scrapes a URL and extracts leads/prospects.
+  2. Outreach Sequence Agent (agent_017LyXQCVCTQRgqZoGAczYSK) — Builds a multi-step outreach sequence from the lead list.
+  3. Email Outreach Agent (agent_01MqUeUaEN29wn5MDLBZKxYV) — Sends personalized emails to leads.
+  4. SMS Outreach Agent (agent_01LbgLUqFSJQ4FndvGbkDMAs) — Sends personalized SMS messages to leads.
+  5. Reply Monitoring Agent (agent_01TW6FQ1nMtPT23V5Md26ea4) — Monitors inboxes and tracks replies.
+
+  EXECUTION FLOW:
+  Step 1 — Trigger Lead Gen Agent with the target URL. Wait for its lead list output.
+  Step 2 — Pass the lead list to Outreach Sequence Agent. Wait for the sequence plan.
+  Step 3 — Trigger Email Outreach Agent AND SMS Outreach Agent in parallel with the sequence plan. Monitor both until complete.
+  Step 4 — Trigger Reply Monitoring Agent to watch for responses. Report any replies back in real time and after this, compile a final campaign report.
+
+  At each step: log which agent you triggered, what input you sent, and what output you received. Surface any errors immediately. After all steps complete, present the user with a unified campaign summary: leads found, messages sent, replies received, and next recommended actions.
+mcp_servers: []
+tools:
+  - type: agent_toolset_20260401
+    configs: []
+    default_config:
+      enabled: true
+      permission_policy:
+        type: always_allow
+skills: []
+metadata:
+  orchestrator_type: multi_agent_coordinator
+  subagent_ids: agent_01VNP4f2YXpjXz1zxnN3wiJ6,agent_017LyXQCVCTQRgqZoGAczYSK,agent_01MqUeUaEN29wn5MDLBZKxYV,agent_01LbgLUqFSJQ4FndvGbkDMAs,agent_01TW6FQ1nMtPT23V5Md26ea4
+  subagents: URL-to-Leads, Outreach Sequence, Email Outreach, SMS Outreach, Reply Monitoring
+multiagent:
+  type: coordinator
+  agents:
+    - id: agent_01VNP4f2YXpjXz1zxnN3wiJ6
+      type: agent
+      version: 1
+    - id: agent_017LyXQCVCTQRgqZoGAczYSK
+      type: agent
+      version: 1
+    - id: agent_01MqUeUaEN29wn5MDLBZKxYV
+      type: agent
+      version: 1
+    - id: agent_01LbgLUqFSJQ4FndvGbkDMAs
+      type: agent
+      version: 1
+    - id: agent_01TW6FQ1nMtPT23V5Md26ea4
+      type: agent
+      version: 1

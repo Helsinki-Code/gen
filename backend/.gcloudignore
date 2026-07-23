@@ -1,0 +1,17 @@
+# What gcloud --source uploads (Cloud Build). Keep secrets out of the tarball.
+.gcloudignore
+.git
+.venv
+venv
+__pycache__/
+**/__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+.env.backup.*
+amr/
+deploy/
+*.md
+.pytest_cache/
+.mypy_cache/

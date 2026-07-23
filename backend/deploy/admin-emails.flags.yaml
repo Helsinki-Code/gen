@@ -1,0 +1,2 @@
+--update-env-vars:
+  ADMIN_EMAILS: info@amrogen.com,sa@amrogen.com,hemant@joshi.me

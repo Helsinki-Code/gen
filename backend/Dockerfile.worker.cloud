@@ -1,0 +1,11 @@
+FROM python:3.11-slim
+WORKDIR /app
+# The procrastinate console script does not add the working directory to
+# sys.path (unlike celery), so the app package must be importable explicitly.
+ENV PYTHONPATH=/app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+RUN chmod +x /app/start_worker.sh
+
+EXPOSE 8080

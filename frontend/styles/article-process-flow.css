@@ -1,0 +1,95 @@
+/**
+ * Source of truth: ../../shared/process-flow/article-process-flow.css (synced by scripts/sync-shared-typography.mjs).
+ */
+
+/* Shared article process-flow HTML (programmatic figures + blog embeds) */
+.article-process-flow {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  background: hsl(var(--card));
+}
+
+.article-process-flow .apf-title {
+  margin: 0 0 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.article-process-flow .apf-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .article-process-flow .apf-grid {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+}
+
+.article-process-flow .apf-step {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid hsl(var(--border) / 0.6);
+  border-radius: 0.75rem;
+  background: hsl(var(--muted) / 0.3);
+}
+
+.article-process-flow .apf-step--accent {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--card));
+  box-shadow: 0 1px 2px hsl(var(--foreground) / 0.05);
+}
+
+.article-process-flow .apf-num {
+  display: flex;
+  height: 2rem;
+  width: 2rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: hsl(var(--muted));
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.article-process-flow .apf-step--accent .apf-num {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.article-process-flow .apf-label {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: hsl(var(--foreground));
+}
+
+.article-process-flow .apf-sub,
+.article-process-flow .apf-detail {
+  margin: 0.35rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+
+.article-process-flow .apf-highlight {
+  margin: 0.5rem 0 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--primary));
+}
+
+.article-process-flow .apf-bullets {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}

@@ -1,0 +1,1353 @@
+{
+  "config": {
+    "configFile": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\playwright.config.ts",
+    "rootDir": "C:/projects/agenticai/agentic-ai-amro-cleaned/amrogen/frontend/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "e2e-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "e2e-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/projects/agenticai/agentic-ai-amro-cleaned/amrogen/frontend/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "api-contract",
+        "name": "api-contract",
+        "testDir": "C:/projects/agenticai/agentic-ai-amro-cleaned/amrogen/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "/(api-contract|gaps)\\.spec\\.ts/"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "C:/projects/agenticai/agentic-ai-amro-cleaned/amrogen/frontend/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "browser-chromium",
+        "name": "browser-chromium",
+        "testDir": "C:/projects/agenticai/agentic-ai-amro-cleaned/amrogen/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "/browser\\/.*\\.spec\\.ts/"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.51.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "browser\\app-pages.spec.ts",
+      "file": "browser/app-pages.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Browser E2E — app pages call backend",
+          "file": "browser/app-pages.spec.ts",
+          "line": 74,
+          "column": 6,
+          "specs": [
+            {
+              "title": "page /dashboard loads and hits API",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 47592,
+                      "error": {
+                        "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"",
+                        "stack": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13",
+                        "location": {
+                          "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                          "column": 10,
+                          "line": 49
+                        },
+                        "snippet": "  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                            "column": 10,
+                            "line": 49
+                          },
+                          "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n\n  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T13:59:48.089Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--37fd7-ashboard-loads-and-hits-API-browser-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--37fd7-ashboard-loads-and-hits-API-browser-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--37fd7-ashboard-loads-and-hits-API-browser-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                        "column": 10,
+                        "line": 49
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9b06deb0b7542b3d0833-3c8ef8c42ad2a5944abe",
+              "file": "browser/app-pages.spec.ts",
+              "line": 80,
+              "column": 9
+            },
+            {
+              "title": "page /campaigns loads and hits API",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 47564,
+                      "error": {
+                        "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"",
+                        "stack": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13",
+                        "location": {
+                          "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                          "column": 10,
+                          "line": 49
+                        },
+                        "snippet": "  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                            "column": 10,
+                            "line": 49
+                          },
+                          "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n\n  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:00:37.723Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--6905c-ampaigns-loads-and-hits-API-browser-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--6905c-ampaigns-loads-and-hits-API-browser-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--6905c-ampaigns-loads-and-hits-API-browser-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                        "column": 10,
+                        "line": 49
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9b06deb0b7542b3d0833-3b695f260cf66b3d1daf",
+              "file": "browser/app-pages.spec.ts",
+              "line": 80,
+              "column": 9
+            },
+            {
+              "title": "page /campaigns/new loads and hits API",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4210,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:01:27.188Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9b06deb0b7542b3d0833-01af54c7d985c90b4246",
+              "file": "browser/app-pages.spec.ts",
+              "line": 80,
+              "column": 9
+            },
+            {
+              "title": "page /contacts loads and hits API",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 47187,
+                      "error": {
+                        "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"",
+                        "stack": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13",
+                        "location": {
+                          "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                          "column": 10,
+                          "line": 49
+                        },
+                        "snippet": "  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                            "column": 10,
+                            "line": 49
+                          },
+                          "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n\n  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:01:32.102Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--924f4-contacts-loads-and-hits-API-browser-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--924f4-contacts-loads-and-hits-API-browser-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--924f4-contacts-loads-and-hits-API-browser-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                        "column": 10,
+                        "line": 49
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9b06deb0b7542b3d0833-a80a01defcf9e8785706",
+              "file": "browser/app-pages.spec.ts",
+              "line": 80,
+              "column": 9
+            },
+            {
+              "title": "page /inbox loads and hits API",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 47596,
+                      "error": {
+                        "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"",
+                        "stack": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13",
+                        "location": {
+                          "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                          "column": 10,
+                          "line": 49
+                        },
+                        "snippet": "  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                            "column": 10,
+                            "line": 49
+                          },
+                          "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n\n  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:02:20.410Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--ee43a-ge-inbox-loads-and-hits-API-browser-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--ee43a-ge-inbox-loads-and-hits-API-browser-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--ee43a-ge-inbox-loads-and-hits-API-browser-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                        "column": 10,
+                        "line": 49
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9b06deb0b7542b3d0833-4f8c5c3a5f13bc09ac3d",
+              "file": "browser/app-pages.spec.ts",
+              "line": 80,
+              "column": 9
+            },
+            {
+              "title": "page /podcast-studio loads and hits API",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 47535,
+                      "error": {
+                        "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"",
+                        "stack": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13",
+                        "location": {
+                          "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                          "column": 10,
+                          "line": 49
+                        },
+                        "snippet": "  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                            "column": 10,
+                            "line": 49
+                          },
+                          "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n\n  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:03:09.812Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--c276f-t-studio-loads-and-hits-API-browser-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--c276f-t-studio-loads-and-hits-API-browser-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--c276f-t-studio-loads-and-hits-API-browser-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                        "column": 10,
+                        "line": 49
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9b06deb0b7542b3d0833-9c19546525b81189cb03",
+              "file": "browser/app-pages.spec.ts",
+              "line": 80,
+              "column": 9
+            },
+            {
+              "title": "page /settings/credits loads and hits API",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 47338,
+                      "error": {
+                        "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"",
+                        "stack": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13",
+                        "location": {
+                          "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                          "column": 10,
+                          "line": 49
+                        },
+                        "snippet": "  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                            "column": 10,
+                            "line": 49
+                          },
+                          "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n\n  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:03:59.251Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--b4871--credits-loads-and-hits-API-browser-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--b4871--credits-loads-and-hits-API-browser-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--b4871--credits-loads-and-hits-API-browser-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                        "column": 10,
+                        "line": 49
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9b06deb0b7542b3d0833-e49041427b921c3bdc74",
+              "file": "browser/app-pages.spec.ts",
+              "line": 80,
+              "column": 9
+            },
+            {
+              "title": "page /settings/gmail loads and hits API",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 47603,
+                      "error": {
+                        "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"",
+                        "stack": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13",
+                        "location": {
+                          "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                          "column": 10,
+                          "line": 49
+                        },
+                        "snippet": "  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                            "column": 10,
+                            "line": 49
+                          },
+                          "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n\n  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:04:48.238Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--47064-gs-gmail-loads-and-hits-API-browser-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--47064-gs-gmail-loads-and-hits-API-browser-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--47064-gs-gmail-loads-and-hits-API-browser-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                        "column": 10,
+                        "line": 49
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9b06deb0b7542b3d0833-61d5865259163d95f62d",
+              "file": "browser/app-pages.spec.ts",
+              "line": 80,
+              "column": 9
+            },
+            {
+              "title": "page /settings/resend loads and hits API",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 47441,
+                      "error": {
+                        "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"",
+                        "stack": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13",
+                        "location": {
+                          "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                          "column": 10,
+                          "line": 49
+                        },
+                        "snippet": "  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                            "column": 10,
+                            "line": 49
+                          },
+                          "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n\n  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:05:37.561Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--dea64-s-resend-loads-and-hits-API-browser-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--dea64-s-resend-loads-and-hits-API-browser-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--dea64-s-resend-loads-and-hits-API-browser-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                        "column": 10,
+                        "line": 49
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9b06deb0b7542b3d0833-61f1fbda77cd9f4760b3",
+              "file": "browser/app-pages.spec.ts",
+              "line": 80,
+              "column": 9
+            },
+            {
+              "title": "page /settings/twilio loads and hits API",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 47665,
+                      "error": {
+                        "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"",
+                        "stack": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13",
+                        "location": {
+                          "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                          "column": 10,
+                          "line": 49
+                        },
+                        "snippet": "  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                            "column": 10,
+                            "line": 49
+                          },
+                          "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n\n  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:06:26.745Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--e6f3b-s-twilio-loads-and-hits-API-browser-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--e6f3b-s-twilio-loads-and-hits-API-browser-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--e6f3b-s-twilio-loads-and-hits-API-browser-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                        "column": 10,
+                        "line": 49
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9b06deb0b7542b3d0833-0e46781b35771ad733b6",
+              "file": "browser/app-pages.spec.ts",
+              "line": 80,
+              "column": 9
+            },
+            {
+              "title": "page /settings/schedule loads and hits API",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 47908,
+                      "error": {
+                        "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"",
+                        "stack": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13",
+                        "location": {
+                          "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                          "column": 10,
+                          "line": 49
+                        },
+                        "snippet": "  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                            "column": 10,
+                            "line": 49
+                          },
+                          "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n\n  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:07:16.787Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--80364-schedule-loads-and-hits-API-browser-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--80364-schedule-loads-and-hits-API-browser-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--80364-schedule-loads-and-hits-API-browser-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                        "column": 10,
+                        "line": 49
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9b06deb0b7542b3d0833-7032650aebb740144c23",
+              "file": "browser/app-pages.spec.ts",
+              "line": 80,
+              "column": 9
+            },
+            {
+              "title": "page /settings/api-keys loads and hits API",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 47075,
+                      "error": {
+                        "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"",
+                        "stack": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13",
+                        "location": {
+                          "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                          "column": 10,
+                          "line": 49
+                        },
+                        "snippet": "  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                            "column": 10,
+                            "line": 49
+                          },
+                          "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n\n  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13"
+                        },
+                        {
+                          "message": "Error: browserContext._wrapApiCall: ENOENT: no such file or directory, open 'C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\.playwright-artifacts-10\\traces\\9b06deb0b7542b3d0833-0d393bda13b44ed03323.trace'"
+                        },
+                        {
+                          "message": "Error: ENOENT: no such file or directory, open 'C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\.playwright-artifacts-10\\c1a231d893ce37d7371b408345fc0586.zip'"
+                        },
+                        {
+                          "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:08:06.726Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--f13d6-api-keys-loads-and-hits-API-browser-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                        "column": 10,
+                        "line": 49
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9b06deb0b7542b3d0833-0d393bda13b44ed03323",
+              "file": "browser/app-pages.spec.ts",
+              "line": 80,
+              "column": 9
+            },
+            {
+              "title": "page /settings/accounts loads and hits API",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 47269,
+                      "error": {
+                        "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"",
+                        "stack": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13",
+                        "location": {
+                          "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                          "column": 10,
+                          "line": 49
+                        },
+                        "snippet": "  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                            "column": 10,
+                            "line": 49
+                          },
+                          "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n\n  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:10:25.150Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--14f69-accounts-loads-and-hits-API-browser-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--14f69-accounts-loads-and-hits-API-browser-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--14f69-accounts-loads-and-hits-API-browser-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                        "column": 10,
+                        "line": 49
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9b06deb0b7542b3d0833-43b5163922cc072934cf",
+              "file": "browser/app-pages.spec.ts",
+              "line": 80,
+              "column": 9
+            },
+            {
+              "title": "page /admin loads and hits API",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 47305,
+                      "error": {
+                        "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"",
+                        "stack": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13",
+                        "location": {
+                          "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                          "column": 10,
+                          "line": 49
+                        },
+                        "snippet": "  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                            "column": 10,
+                            "line": 49
+                          },
+                          "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n\n  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:11:13.947Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--e8846-ge-admin-loads-and-hits-API-browser-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--e8846-ge-admin-loads-and-hits-API-browser-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--e8846-ge-admin-loads-and-hits-API-browser-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                        "column": 10,
+                        "line": 49
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9b06deb0b7542b3d0833-1aeeb28532126b1212ad",
+              "file": "browser/app-pages.spec.ts",
+              "line": 80,
+              "column": 9
+            },
+            {
+              "title": "page /admin/users loads and hits API",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 47259,
+                      "error": {
+                        "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"",
+                        "stack": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13",
+                        "location": {
+                          "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                          "column": 10,
+                          "line": 49
+                        },
+                        "snippet": "  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                            "column": 10,
+                            "line": 49
+                          },
+                          "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n\n  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:12:02.949Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--9c1ad-in-users-loads-and-hits-API-browser-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--9c1ad-in-users-loads-and-hits-API-browser-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--9c1ad-in-users-loads-and-hits-API-browser-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                        "column": 10,
+                        "line": 49
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9b06deb0b7542b3d0833-7b0c21d9f5b2fa161e5d",
+              "file": "browser/app-pages.spec.ts",
+              "line": 80,
+              "column": 9
+            },
+            {
+              "title": "page /admin/revenue loads and hits API",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 47280,
+                      "error": {
+                        "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"",
+                        "stack": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13",
+                        "location": {
+                          "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                          "column": 10,
+                          "line": 49
+                        },
+                        "snippet": "  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                            "column": 10,
+                            "line": 49
+                          },
+                          "message": "TimeoutError: page.waitForResponse: Timeout 45000ms exceeded while waiting for event \"response\"\n\n  47 |\n  48 |   const waiters = apiIncludes.map((needle) =>\n> 49 |     page.waitForResponse(\n     |          ^\n  50 |       (res) => isCloudRunApi(res.url(), apiURL) && res.url().includes(needle),\n  51 |       { timeout: 45_000 }\n  52 |     )\n    at map (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:49:10)\n    at collectApiCalls (C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:48:31)\n    at C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts:82:13"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:12:51.809Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--dcbff--revenue-loads-and-hits-API-browser-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--dcbff--revenue-loads-and-hits-API-browser-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\test-results\\browser-app-pages-Browser--dcbff--revenue-loads-and-hits-API-browser-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\projects\\agenticai\\agentic-ai-amro-cleaned\\amrogen\\frontend\\e2e\\browser\\app-pages.spec.ts",
+                        "column": 10,
+                        "line": 49
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9b06deb0b7542b3d0833-1da4534e3189ec47f446",
+              "file": "browser/app-pages.spec.ts",
+              "line": 80,
+              "column": 9
+            },
+            {
+              "title": "page /admin/articles loads and hits API",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4052,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:13:40.738Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9b06deb0b7542b3d0833-e1cba1ad7547cd829fc5",
+              "file": "browser/app-pages.spec.ts",
+              "line": 80,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "browser\\auth.spec.ts",
+      "file": "browser/auth.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Browser E2E — auth + shell (front→BFF→API)",
+          "file": "browser/auth.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "sign-in form calls BFF and lands on admin/dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1797,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:13:45.317Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ad37a75ba3da77f8b725-6d4d9e7ece47c5d771a5",
+              "file": "browser/auth.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "bad password shows error and stays on sign-in",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "browser-chromium",
+                  "projectName": "browser-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 741,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-10T14:13:47.117Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ad37a75ba3da77f8b725-35ecc51cbaed3f5b39db",
+              "file": "browser/auth.spec.ts",
+              "line": 11,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-10T13:59:47.282Z",
+    "duration": 840689.202,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 15,
+    "flaky": 0
+  }
+}

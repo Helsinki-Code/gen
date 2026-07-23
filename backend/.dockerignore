@@ -1,0 +1,13 @@
+# Do not bake secrets into the image — Cloud Run injects env at runtime
+.env
+.env.*
+!.env.example
+**/__pycache__/
+**/*.pyc
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+*.md
+deploy/
+scripts/

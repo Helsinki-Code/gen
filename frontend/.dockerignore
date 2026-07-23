@@ -1,0 +1,14 @@
+Dockerfile
+.dockerignore
+.git
+.gitignore
+.env*
+node_modules
+.next
+README.md
+*.md
+*.log
+.DS_Store
+coverage
+.nyc_output
+.cursor
