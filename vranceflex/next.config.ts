@@ -1,0 +1,11 @@
+import type { NextConfig } from "next";
+import { withEve } from "eve/next";
+
+const nextConfig: NextConfig = {
+  reactStrictMode: true,
+};
+
+export default withEve(nextConfig, {
+  eveRoot: ".",
+  eveBuildCommand: "npm run build:eve",
+});
